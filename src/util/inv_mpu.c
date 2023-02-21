@@ -98,6 +98,8 @@ static inline int reg_int_cb(struct int_param_s *int_param)
 /* #warning "No compass = less profit for Invensense. Lame." */
 #endif
 
+#define MPU_I2C_ADR 0x68
+
 //static int set_int_enable(unsigned char enable);
 
 /* Hardware registers needed by driver. */
