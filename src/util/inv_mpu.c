@@ -717,7 +717,9 @@ int mpu_init(struct int_param_s *int_param)
 #endif
 
 #ifdef AK89xx_SECONDARY
-    setup_compass();
+    if (setup_compass()) {
+        return -1;
+    }
     if (mpu_set_compass_sample_rate(10))
         return -1;
 #else
